@@ -3,10 +3,10 @@
 $imagesPath = "PathToImagesFolder\"
 $images = Get-ChildItem $imagesPath -File
 
-#Counter for the progress bar
+#Initialize the counter for the progress bar
 $i = 0
 
-# Define an array of common image file extensions
+#Define an array of common image file extensions
 $imageExtensions = @(".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff")
 
 #Iterating between all the images inside of the folder
@@ -37,4 +37,4 @@ foreach ($image in $images) {
         Write-Host "The file $image, isn't a image file, or it is using a strange extension."
     }
 }
-Write-Host "All images metadata was renamed successfully!"
+Write-Host "Properties of all images changed successfully!"
